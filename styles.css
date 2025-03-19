@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #7FFFD4;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #50C878;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #6A5ACD;
+    background-color: white;
+    padding: 5px 10px;
+    transform: rotate(-10deg);
+    display: inline-block;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Bouton de connexion */
+.connexion-container {
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.connexion-btn {
+    padding: 10px 20px;
+    background-color: #50E3C2;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Contenu principal */
+.main-container {
+    background-color: #AFEEEE;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Pop-up d'alerte */
+.alert-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content {
+    background-color: #FFF8DC;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 5px solid #FF0000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.resident-info, .medical-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+}
+
+.emergency-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.sos-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    width: 30%;
+}
+
+.family {
+    background-color: #4169E1;
+}
+
+.pompiers {
+    background-color: #B22222;
+}
+
+.samu {
+    background-color: #008000;
+}
+
+/* Bouton d'urgence */
+.urgence {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 500;
+}
+
+.urgence-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.urgence-btn img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+/* Animation pour l'alerte */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.alert-content h2 {
+    color: #FF0000;
+    text-align: center;
+    animation: pulse 1.5s infinite;
+}
