@@ -170,3 +170,71 @@ nav a {
     text-align: center;
     animation: pulse 1.5s infinite;
 }
+body {
+    font-family: Arial, sans-serif; /* Police de caractères */
+    background-color: #b0e0e6; /* Couleur de fond vert menthe */
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    background-color: #f0fff0; /* Un beige légèrement différent pour le contraste*/
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;  /* Centre le conteneur */
+}
+
+label {
+    display: block; /* Place les libellés au-dessus des champs */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 22px); /* Occupe toute la largeur disponible */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;  /* Bordure légère */
+    border-radius: 5px;
+    background-color: #FFFFE0; /* Couleur de fond beige des champs */
+}
+
+textarea {
+    height: 100px;  /* Hauteur pour les zones de texte multilignes */
+}
+
+button[type="submit"]{
+  background-color: #F0E68C; /*khaki*/
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+
+}
+
+.file-input-container {
+    background-color: #F5F5DC;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;  /* Espace en bas */
+}
+.file-input-container label {
+    display: inline-block; /* Permet d'appliquer le padding */
+    padding: 10px 20px;
+    background-color: #E0FFFF; /* Couleur bleu clair pour le bouton */
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    border : none;
+}
