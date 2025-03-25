@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Informations du Patient</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ehpad</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="#">Prendre rendez-vous</a>
+            <a href="#">Présentation</a>
+            <a href="#">Contact</a>
+            <a href="patient_info.html">Informations Patient</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <h1>Informations du Patient</h1>
+        <form id="patientInfoForm">
+            <label for="firstName">Prénom :</label><br>
+            <input type="text" id="firstName" name="firstName"><br><br>
+
+            <label for="lastName">Nom :</label><br>
+            <input type="text" id="lastName" name="lastName"><br><br>
+
+            <label for="roomNumber">Numéro de Chambre :</label><br>
+            <input type="text" id="roomNumber" name="roomNumber"><br><br>
+
+            <label for="dateOfBirth">Date de Naissance :</label><br>
+            <input type="date" id="dateOfBirth" name="dateOfBirth"><br><br>
+
+            <label for="emergencyContactName">Nom du Contact d'Urgence :</label><br>
+            <input type="text" id="emergencyContactName" name="emergencyContactName"><br><br>
+
+            <label for="emergencyContactPhone">Téléphone du Contact d'Urgence :</label><br>
+            <input type="tel" id="emergencyContactPhone" name="emergencyContactPhone"><br><br>
+
+            <label for="medicalHistory">Antécédents Médicaux :</label><br>
+            <textarea id="medicalHistory" name="medicalHistory"></textarea><br><br>
+
+            <label for="currentMedications">Médicaments Actuels :</label><br>
+            <textarea id="currentMedications" name="currentMedications"></textarea><br><br>
+
+            <label for="allergies">Allergies :</label><br>
+            <textarea id="allergies" name="allergies"></textarea><br><br>
+
+            <button type="submit">Soumettre</button>
+        </form>
+
+        <div id="displayArea"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('patientInfoForm');
+        const displayArea = document.getElementById('displayArea');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = {};
+            for (const [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            displayArea.innerHTML = `<h2>Informations Saisies :</h2><pre>${JSON.stringify(data, null, 2)}</pre>`;
+        });
+    </script>
+</body>
+</html>
